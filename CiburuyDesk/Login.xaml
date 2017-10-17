@@ -13,12 +13,12 @@
                 <ColumnDefinition Width="272*"/>
                 <ColumnDefinition Width="273*"/>
             </Grid.ColumnDefinitions>
-            <TextBox x:Name="pwdBox" HorizontalAlignment="Center" Height="35" Margin="161,169,93.8,149" VerticalAlignment="Center" Width="290" FontSize="22" Grid.ColumnSpan="2"/>
             <Image x:Name="pwd_icon_png" Margin="94,162,130,143" Source="img/pwd-icon.png" Stretch="Fill" Width="48" Height="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Image x:Name="email_icon_png" Margin="94,89,130,216" Source="img/email-icon.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Width="48" Height="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
             <Image x:Name="masukBtn" HorizontalAlignment="Left" Height="53" Margin="45,216,0,84" VerticalAlignment="Center" Width="133" Source="img/masuk-btn.png" Cursor="Hand" MouseLeftButtonDown="masukbtn_Click" MouseEnter="masukbtn_MouseEnter" MouseLeave="masukbtn_MouseLeave" Grid.Column="1"/>
             <TextBox x:Name="emailBox" HorizontalAlignment="Center" Margin="161,95,94.8,222" VerticalAlignment="Center" Height="36" Width="289" FontSize="22" Grid.ColumnSpan="2"/>
+            <PasswordBox x:Name="pwdBox" HorizontalAlignment="Center" Margin="161,169,94.8,149" VerticalAlignment="Center" Width="289" Grid.ColumnSpan="2" Height="35" FontSize="22"/>
 
 
         </Grid>

@@ -28,7 +28,8 @@ namespace CiburuyDesk
 
         private void masukbtn_Click(object sender, MouseButtonEventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(emailBox.Text) == true || String.IsNullOrWhiteSpace(pwdBox.Text) == true)
+            string pwd = pwdBox.Password;
+            if (String.IsNullOrWhiteSpace(emailBox.Text) == true || String.IsNullOrWhiteSpace(pwd) == true)
             {
                 MessageBox.Show("Email dan Password tidak boleh kosong", "Oops...", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
@@ -36,7 +37,7 @@ namespace CiburuyDesk
             {
                 string myConnection = "datasource=localhost;port=3306;username=root;password=1234";
                 MySqlConnection myConn = new MySqlConnection(myConnection);
-                MySqlCommand SelectCommand = new MySqlCommand("select email, pwd from db_ciburuy.t_akun where email = '" + this.emailBox.Text + "' and pwd = '" + this.pwdBox.Text + "';", myConn);
+                MySqlCommand SelectCommand = new MySqlCommand("select email, pwd from db_ciburuy.t_akun where email = '" + this.emailBox.Text + "' and pwd = '" + pwd + "';", myConn);
                 MySqlDataReader myReader;
                 myConn.Open();
                 myReader = SelectCommand.ExecuteReader();
