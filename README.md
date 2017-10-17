@@ -1,0 +1,2 @@
+# CiburuyDesk
+Ciburuy Desk – adalah aplikasi direktori citra naskah Sunda kuno, dengan feature untuk memvisulisasikan naskah Sunda kuno, Galeri citra non naskah, karya ilmiah terkait riset situs Ciburuy, permainan, transliterasi, indeksasi, dan mesin pencari. Aplikasi desktop ini merupakan wujud pelestarian budaya yang dikhususkan untuk naskah yang ada di Situs Ciburuy.

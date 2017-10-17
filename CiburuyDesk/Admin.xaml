@@ -1,0 +1,22 @@
+﻿<Window x:Class="CiburuyDesk.Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CiburuyDesk"
+        mc:Ignorable="d"
+        Title="Ciburuy Desk" Height="720" Width="1280" WindowStartupLocation="CenterScreen" WindowState="Maximized" HorizontalAlignment="Center" VerticalAlignment="Center">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="640*"/>
+            <ColumnDefinition Width="640*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="bg" Source="img/bg.png" Stretch="Fill" Margin="0,0,-0.4,0.4" Grid.ColumnSpan="2"/>
+        <Label x:Name="judul" Content="Halaman Admin" HorizontalAlignment="Center" Margin="418,51,417.6,548.4" VerticalAlignment="Center" Width="438" FontFamily="Monotype Corsiva" FontSize="72" Grid.ColumnSpan="2"/>
+        <Image x:Name="logout" Source="img/power-icon.png" HorizontalAlignment="Left" Height="47" Margin="10,10,0,0" VerticalAlignment="Top" Width="47" MouseLeftButtonDown="logout_Click"/>
+        <Image x:Name="tile_1" Source="img/db-icon.png" HorizontalAlignment="Center" Height="220" Margin="315,235,143.8,235.4" VerticalAlignment="Center" Width="177" MouseLeftButtonDown="tile1_Click" MouseEnter="tile1_MouseEnter" MouseLeave="tile1_MouseLeave" Cursor="Hand"/>
+        <Image x:Name="tile_2" Source="img/dashboard-icon.png" HorizontalAlignment="Center" Height="220" Margin="438,0,436,0" VerticalAlignment="Center" Width="177" MouseLeftButtonDown="tile2_Click" MouseEnter="tile2_MouseEnter" MouseLeave="tile2_MouseLeave" Cursor="Hand" Grid.ColumnSpan="2"/>
+        <Image x:Name="tile_3" Source="img/log-icon.png" HorizontalAlignment="Center" Height="220" Margin="145.2,235,315,235.4" VerticalAlignment="Center" Width="177" MouseLeftButtonDown="tile3_Click" MouseEnter="tile3_MouseEnter" MouseLeave="tile3_MouseLeave" Cursor="Hand" Grid.Column="1"/>
+
+    </Grid>
+</Window>
