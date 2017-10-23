@@ -18,7 +18,7 @@
 
             <Image x:Name="masukBtn" HorizontalAlignment="Left" Height="53" Margin="45,216,0,84" VerticalAlignment="Center" Width="133" Source="img/masuk-btn.png" Cursor="Hand" MouseLeftButtonDown="masukbtn_Click" MouseEnter="masukbtn_MouseEnter" MouseLeave="masukbtn_MouseLeave" Grid.Column="1"/>
             <TextBox x:Name="emailBox" HorizontalAlignment="Center" Margin="161,95,94.8,222" VerticalAlignment="Center" Height="36" Width="289" FontSize="22" Grid.ColumnSpan="2"/>
-            <PasswordBox x:Name="pwdBox" HorizontalAlignment="Center" Margin="161,169,94.8,149" VerticalAlignment="Center" Width="289" Grid.ColumnSpan="2" Height="35" FontSize="22"/>
+            <PasswordBox x:Name="pwdBox" HorizontalAlignment="Center" Margin="161,169,94.8,149" VerticalAlignment="Center" Width="289" Grid.ColumnSpan="2" Height="35" FontSize="22" KeyDown="pwdBox_KeyDown"/>
 
 
         </Grid>

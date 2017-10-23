@@ -26,7 +26,7 @@ namespace CiburuyDesk
             InitializeComponent();
         }
 
-        private void masukbtn_Click(object sender, MouseButtonEventArgs e)
+        void login()
         {
             string pwd = pwdBox.Password;
             if (String.IsNullOrWhiteSpace(emailBox.Text) == true || String.IsNullOrWhiteSpace(pwd) == true)
@@ -65,6 +65,11 @@ namespace CiburuyDesk
             }
         }
 
+        private void masukbtn_Click(object sender, MouseButtonEventArgs e)
+        {
+            login();
+        }
+
         private void masukbtn_MouseEnter(object sender, MouseEventArgs e)
         {
             masukBtn.Source = new BitmapImage(new Uri(@"img/masuk-btn-hover.png", UriKind.Relative));
@@ -73,6 +78,14 @@ namespace CiburuyDesk
         private void masukbtn_MouseLeave(object sender, MouseEventArgs e)
         {
             masukBtn.Source = new BitmapImage(new Uri(@"img/masuk-btn.png", UriKind.Relative));
+        }
+        
+        private void pwdBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key != System.Windows.Input.Key.Enter) return;
+
+            // your event handler here
+            login();
         }
     }
 }

@@ -7,16 +7,40 @@
         mc:Ignorable="d"
         Title="Ciburuy Desk" Height="720" Width="1280" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="640*"/>
-            <ColumnDefinition Width="640*"/>
-        </Grid.ColumnDefinitions>
         <Image x:Name="bg" Margin="0,0,-0.4,0.4" Source="img/bg.png" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" StretchDirection="UpOnly"/>
         <Label x:Name="judul" Content="Data Pengunjung" HorizontalAlignment="Center" Margin="402,55,401.6,544.4" VerticalAlignment="Center" Width="470" FontFamily="Monotype Corsiva" FontSize="72" Grid.ColumnSpan="2"/>
-        <Image x:Name="back" Source="img/back-icon.png" HorizontalAlignment="Left" Height="87" Margin="10,10,0,0" VerticalAlignment="Top" Width="87"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Center" Margin="0,151,-0.4,223.4" VerticalAlignment="Center" Height="316" Width="1274" Grid.ColumnSpan="2"/>
-        <DataGrid x:Name="dataGrid1" HorizontalAlignment="Left" Margin="-257,92,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="refreshbtn" Grid.ColumnSpan="2" Content="Refresh" HorizontalAlignment="Center" Margin="561,501,560.6,150.4" VerticalAlignment="Center" Width="152" Height="39" Click="refreshbtn_Click"/>
-
+        <Image x:Name="back" Source="img/back-icon.png" HorizontalAlignment="Left" Height="87" Margin="10,10,0,0" VerticalAlignment="Top" Width="87" MouseDown="back_MouseDown"/>
+        <!--<DataGrid x:Name="dataGrid" 
+                  ItemsSource="{Binding LoadDataBinding}"
+                  AutoGenerateColumns="False"
+                  HorizontalAlignment="Left"
+                  Margin="244,150,0,195"
+                  CanUserResizeRows="False" Width="780"
+                  >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=id}"
+                                    Header="Id #"
+                                    Width="75"
+                                    IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=tanggal}"
+                                    Header="Tanggal #"
+                                    Width="75"
+                                    IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=nama}"
+                                    Header="Nama #"
+                                    Width="75"
+                                    IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=email}"
+                                    Header="email #"
+                                    Width="75"
+                                    IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid> -->
+        <Button x:Name="refreshbtn" Grid.ColumnSpan="2" Content="Refresh" HorizontalAlignment="Center" Margin="560,514,560,136" VerticalAlignment="Center" Width="152" Height="39" Click="refreshbtn_Click"/>
+        <DataGrid x:Name="dataGrid" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="342" Margin="320,150,0,0" VerticalAlignment="Top" Width="664" CanUserResizeRows="False" CanUserResizeColumns="False">
+            <DataGrid.Effect>
+                <DropShadowEffect/>
+            </DataGrid.Effect>
+        </DataGrid>
     </Grid>
 </Window>
