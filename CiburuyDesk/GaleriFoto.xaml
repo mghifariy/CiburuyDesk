@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CiburuyDesk"
         mc:Ignorable="d"
-        Title="Ciburuy Desk" Height="720" Width="1280" WindowStartupLocation="CenterScreen" WindowState="Maximized" HorizontalAlignment="Center" VerticalAlignment="Center">
+        Title="Ciburuy Desk" Height="720" Width="1280" WindowStartupLocation="CenterScreen" WindowState="Maximized" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStyle="None" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="319*"/>

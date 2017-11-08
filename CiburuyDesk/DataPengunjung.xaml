@@ -1,12 +1,16 @@
 <<<<<<< HEAD
+<Window x:Class="CiburuyDesk.DataPengunjung"
+=======
+<<<<<<< HEAD
 ﻿<Window x:Class="CiburuyDesk.DataPengunjung"
+>>>>>>> e733cd5b489cab21d3b10e751dba9f740d1fd999
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CiburuyDesk"
         mc:Ignorable="d"
-        Title="Ciburuy Desk" Height="720" Width="1280" WindowStartupLocation="CenterScreen" WindowState="Maximized" HorizontalAlignment="Center" VerticalAlignment="Center">
+        Title="Ciburuy Desk" Height="720" Width="1280" WindowStartupLocation="CenterScreen" WindowState="Maximized" HorizontalAlignment="Center" VerticalAlignment="Center" ResizeMode="NoResize" WindowStyle="None">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="640*"/>
@@ -19,6 +23,9 @@
         <DataGrid x:Name="dataGrid" ItemsSource="{Binding}" HorizontalAlignment="Center" Height="342" Margin="407,147,408.6,201.4" VerticalAlignment="Center" Width="458" CanUserResizeRows="False" CanUserResizeColumns="False" Grid.ColumnSpan="2">
         </DataGrid>
     </Grid>
+<<<<<<< HEAD
+</Window>
+=======
 </Window>
 =======
 ﻿<Window x:Class="CiburuyDesk.DataPengunjung"
@@ -68,3 +75,4 @@
     </Grid>
 </Window>
 >>>>>>> 49cd5e962ba6fc43238415c41eaeb6c4ef930ea4
+>>>>>>> e733cd5b489cab21d3b10e751dba9f740d1fd999

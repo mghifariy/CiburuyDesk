@@ -29,8 +29,13 @@ namespace CiburuyDesk
 
         String nama = "";
         String email = "";
+<<<<<<< HEAD
         private void save()
         {
+=======
+        private void save()
+        {
+>>>>>>> e733cd5b489cab21d3b10e751dba9f740d1fd999
             string host = "localhost";
             string user = "root";
             string password = "1234";
@@ -46,9 +51,15 @@ namespace CiburuyDesk
             MenuUtama mu = new MenuUtama();
             mu.Show();
             this.Hide();
+<<<<<<< HEAD
             MessageBox.Show("Selamat datang, " + nama, "Halo");
             nama = "";
             email = "";
+=======
+            MessageBox.Show("Selamat datang, " + nama, "Halo");
+            nama = "";
+            email = "";
+>>>>>>> e733cd5b489cab21d3b10e751dba9f740d1fd999
         }
         private void masukbtn_Click(object sender, MouseButtonEventArgs e)
         {
