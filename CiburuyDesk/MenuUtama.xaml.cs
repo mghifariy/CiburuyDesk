@@ -102,6 +102,7 @@ namespace CiburuyDesk
         {
             tile_5.Source = new BitmapImage(new Uri(@"img/tile-5.png", UriKind.Relative));
         }
+
         private void logout_Click(object sender, MouseButtonEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Anda yakin ingin keluar?", "Keluar", MessageBoxButton.YesNo, MessageBoxImage.Information);
@@ -111,6 +112,13 @@ namespace CiburuyDesk
                 bu.Show();
                 this.Hide();
             }
+        }
+
+        private void src_Click(object sender, MouseButtonEventArgs e)
+        {
+            PencarianLontar pl = new PencarianLontar();
+            pl.Show();
+            this.Hide();
         }
     }
 }

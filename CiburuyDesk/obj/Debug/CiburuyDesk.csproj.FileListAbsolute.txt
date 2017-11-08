@@ -26,3 +26,7 @@ C:\Users\Ghifari\documents\visual studio 2015\Projects\CiburuyDesk\CiburuyDesk\o
 C:\Users\Ghifari\documents\visual studio 2015\Projects\CiburuyDesk\CiburuyDesk\obj\Debug\Admin.baml
 C:\Users\Ghifari\documents\visual studio 2015\Projects\CiburuyDesk\CiburuyDesk\obj\Debug\DataPengunjung.g.cs
 C:\Users\Ghifari\documents\visual studio 2015\Projects\CiburuyDesk\CiburuyDesk\obj\Debug\DataPengunjung.baml
+C:\Users\Ghifari\documents\visual studio 2015\Projects\CiburuyDesk\CiburuyDesk\obj\Debug\PencarianLontar.g.cs
+C:\Users\Ghifari\documents\visual studio 2015\Projects\CiburuyDesk\CiburuyDesk\obj\Debug\PencarianLontar.baml
+C:\Users\Ghifari\documents\visual studio 2015\Projects\CiburuyDesk\CiburuyDesk\obj\Debug\InputGaleri.g.cs
+C:\Users\Ghifari\documents\visual studio 2015\Projects\CiburuyDesk\CiburuyDesk\obj\Debug\InputGaleri.baml

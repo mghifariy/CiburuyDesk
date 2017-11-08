@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Data;
@@ -25,30 +26,37 @@ namespace CiburuyDesk
         public DataPengunjung()
         {
             InitializeComponent();
+
+            fillingDataGrid();
+            
+        }
+
+        void fillingDataGrid()
+        {
+            string MyConString = "SERVER=localhost;DATABASE=db_ciburuy;UID=root;PASSWORD=1234;";
+            string sql = "SELECT * FROM t_pengunjung ORDER BY id";
+            MySqlConnection connection = new MySqlConnection(MyConString);
+            connection.Open();
+            MySqlCommand cmd = new MySqlCommand(sql, connection);
+
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+
+            connection.Close();
+
+            dataGrid.DataContext = dt;
         }
 
         private void refreshbtn_Click(object sender, RoutedEventArgs e)
         {
-            string MyConString =
-            "SERVER=localhost:3306;" +
-            "DATABASE=db_ciburuy;" +
-            "UID=root;" +
-            "PASSWORD=1234;";
-
-            string sql = "SELECT * FROM t_pengunjung ORDER BY id";
-
-            using (MySqlConnection connection = new MySqlConnection(MyConString))
-            {
-                connection.Open();
-                using (MySqlCommand cmdSel = new MySqlCommand(sql, connection))
-                {
-                    DataTable dt = new DataTable();
-                    MySqlDataAdapter da = new MySqlDataAdapter(cmdSel);
-                    da.Fill(dt);
-                    dataGrid.DataContext = dt;
-                }
-                connection.Close();
-            }
+            fillingDataGrid();
+        }
+        
+        private void back_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Admin ad = new Admin();
+            this.Close();
+            ad.Show();
         }
     }
 }

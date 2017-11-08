@@ -5,18 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CiburuyDesk"
         mc:Ignorable="d"
-        Title="Ciburuy Desk" Height="720" Width="1280" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="Ciburuy Desk" Height="720" Width="1280" WindowStartupLocation="CenterScreen" WindowState="Maximized" HorizontalAlignment="Center" VerticalAlignment="Center">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="640*"/>
             <ColumnDefinition Width="640*"/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="bg" Margin="0,0,-0.4,0.4" Source="img/bg.png" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" StretchDirection="UpOnly"/>
-        <Label x:Name="judul" Content="Data Pengunjung" HorizontalAlignment="Center" Margin="402,55,401.6,544.4" VerticalAlignment="Center" Width="470" FontFamily="Monotype Corsiva" FontSize="72" Grid.ColumnSpan="2"/>
-        <Image x:Name="back" Source="img/back-icon.png" HorizontalAlignment="Left" Height="87" Margin="10,10,0,0" VerticalAlignment="Top" Width="87"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Center" Margin="0,151,-0.4,223.4" VerticalAlignment="Center" Height="316" Width="1274" Grid.ColumnSpan="2"/>
-        <DataGrid x:Name="dataGrid1" HorizontalAlignment="Left" Margin="-257,92,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="refreshbtn" Grid.ColumnSpan="2" Content="Refresh" HorizontalAlignment="Center" Margin="561,501,560.6,150.4" VerticalAlignment="Center" Width="152" Height="39" Click="refreshbtn_Click"/>
-
+        <Image x:Name="bg" Source="img/bg.png" Stretch="Fill" Margin="0,0,-0.4,0.4" Grid.ColumnSpan="2"/>
+        <Label x:Name="judul" Content="Data Pengunjung" HorizontalAlignment="Center" Margin="402,51,402.6,548.4" VerticalAlignment="Center" Width="469" FontFamily="Monotype Corsiva" FontSize="72" Grid.ColumnSpan="2"/>
+        <Image x:Name="back" Source="img/back-icon.png" HorizontalAlignment="Left" Height="47" Margin="10,10,0,0" VerticalAlignment="Top" Width="47" MouseDown="back_MouseDown"/>
+        <Button x:Name="refreshbtn" Grid.ColumnSpan="2" Content="Refresh" HorizontalAlignment="Center" Margin="561,505,560.6,146.4" VerticalAlignment="Center" Width="152" Height="39" Click="refreshbtn_Click"/>
+        <DataGrid x:Name="dataGrid" ItemsSource="{Binding}" HorizontalAlignment="Center" Height="342" Margin="407,147,408.6,201.4" VerticalAlignment="Center" Width="458" CanUserResizeRows="False" CanUserResizeColumns="False" Grid.ColumnSpan="2">
+        </DataGrid>
     </Grid>
 </Window>

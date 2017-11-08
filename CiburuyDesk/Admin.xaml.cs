@@ -31,7 +31,7 @@ namespace CiburuyDesk
             {
                 BukuTamu bu = new BukuTamu();
                 bu.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -47,7 +47,9 @@ namespace CiburuyDesk
 
         private void tile1_Click(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("Masih dalam pengembangan", "Oops...", MessageBoxButton.OK, MessageBoxImage.Information);
+            InputGaleri ig = new InputGaleri();
+            ig.Show();
+            this.Hide();
         }
 
         private void tile2_MouseEnter(object sender, MouseEventArgs e)
@@ -62,7 +64,9 @@ namespace CiburuyDesk
 
         private void tile2_Click(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("Masih dalam pengembangan", "Oops...", MessageBoxButton.OK, MessageBoxImage.Information);
+            DataPengunjung dp = new DataPengunjung();
+            dp.Show();
+            this.Close();
         }
 
         private void tile3_MouseEnter(object sender, MouseEventArgs e)

@@ -22,6 +22,7 @@
         </Grid>
         <Label x:Name="judul" Content="Menu Utama" HorizontalAlignment="Center" Margin="452,51,452.6,548.4" VerticalAlignment="Center" Width="369" FontFamily="Monotype Corsiva" FontSize="72" Grid.ColumnSpan="2"/>
         <Image x:Name="logout" Source="img/power-icon.png" HorizontalAlignment="Left" Height="47" Margin="10,10,0,0" VerticalAlignment="Top" Width="47" MouseLeftButtonDown="logout_Click"/>
+        <Image x:Name="search" Source="img/src-icon.png" HorizontalAlignment="Right" Height="47" Margin="580.2,10,9.6,633.4" VerticalAlignment="Top" Width="47" MouseLeftButtonDown="src_Click" Grid.Column="1"/>
 
     </Grid>
 </Window>

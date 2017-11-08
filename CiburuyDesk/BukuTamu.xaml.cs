@@ -24,13 +24,31 @@ namespace CiburuyDesk
         public BukuTamu()
         {
             InitializeComponent();
+            
         }
 
+      
         private void masukbtn_Click(object sender, MouseButtonEventArgs e)
         {
+            if (namaBox.Text == "Nama")
+            {
+                namaBox.Text = "";
+            }
+            if (emailBox.Text == "Email (opsional)")
+            {
+                emailBox.Text = "";
+            }
             if (String.IsNullOrWhiteSpace(namaBox.Text) == true)
             {
-                MessageBox.Show("Nama tidak boleh kosong", "Oops...", MessageBoxButton.OK, MessageBoxImage.Warning);
+
+                MessageBoxResult result = MessageBox.Show("Nama tidak boleh kosong", "Oops...", MessageBoxButton.OK, MessageBoxImage.Warning);
+                if (result == MessageBoxResult.OK)
+                {
+                    namaBox.Text = "Nama";
+                    namaBox.Foreground = new SolidColorBrush(Colors.LightGray);
+                    emailBox.Text = "Email (opsional)";
+                    emailBox.Foreground = new SolidColorBrush(Colors.LightGray);
+                }
             }
             else
             {
@@ -68,6 +86,42 @@ namespace CiburuyDesk
             Login lg = new Login();
             lg.Show();
             this.Hide();
+        }
+
+        private void namaBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (namaBox.Text == "Nama")
+            { 
+                namaBox.Text = "";
+                namaBox.Foreground = new SolidColorBrush(Colors.Black);
+            }
+        }
+
+        private void namaBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (namaBox.Text == "")
+            {
+                namaBox.Text = "Nama";
+                namaBox.Foreground = new SolidColorBrush(Colors.LightGray);
+            }
+        }
+
+        private void emailBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (emailBox.Text == "Email (opsional)")
+            {
+                emailBox.Text = "";
+                emailBox.Foreground = new SolidColorBrush(Colors.Black);
+            }
+        }
+
+        private void emailBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (emailBox.Text == "")
+            {
+                emailBox.Text = "Email (opsional)";
+                emailBox.Foreground = new SolidColorBrush(Colors.LightGray);
+            }
         }
     }
 }
