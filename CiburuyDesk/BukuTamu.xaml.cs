@@ -27,47 +27,46 @@ namespace CiburuyDesk
             
         }
 
-      
+        String nama = "";
+        String email = "";
+        private void save()
+        {
+            string host = "localhost";
+            string user = "root";
+            string password = "1234";
+            string database = "db_ciburuy";
+            string connStr = "server=" + host + ";user=" + user + ";database=" + database + ";password=" + password + ";";
+            string query = "insert into t_pengunjung(nama,email)values('" + nama + "','" + email + "');";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataReader read;
+            conn.Open();
+            read = cmd.ExecuteReader();
+            conn.Close();
+            MenuUtama mu = new MenuUtama();
+            mu.Show();
+            this.Hide();
+            MessageBox.Show("Selamat datang, " + nama, "Halo");
+            nama = "";
+            email = "";
+        }
         private void masukbtn_Click(object sender, MouseButtonEventArgs e)
         {
             if (namaBox.Text == "Nama")
             {
-                namaBox.Text = "";
+                MessageBox.Show("Isi Nama");
             }
-            if (emailBox.Text == "Email (opsional)")
+            else if(emailBox.Text== "Email (opsional)")
             {
-                emailBox.Text = "";
-            }
-            if (String.IsNullOrWhiteSpace(namaBox.Text) == true)
-            {
-
-                MessageBoxResult result = MessageBox.Show("Nama tidak boleh kosong", "Oops...", MessageBoxButton.OK, MessageBoxImage.Warning);
-                if (result == MessageBoxResult.OK)
-                {
-                    namaBox.Text = "Nama";
-                    namaBox.Foreground = new SolidColorBrush(Colors.LightGray);
-                    emailBox.Text = "Email (opsional)";
-                    emailBox.Foreground = new SolidColorBrush(Colors.LightGray);
-                }
+                nama = namaBox.Text;
+                email = "";
+                save();
             }
             else
             {
-                string host = "localhost";
-                string user = "root";
-                string password = "1234";
-                string database = "db_ciburuy";
-                string connStr = "server=" + host + ";user=" + user + ";database=" + database + ";password=" + password + ";";
-                string query = "insert into t_pengunjung(nama,email)values('" + this.namaBox.Text + "','" + this.emailBox.Text + "');";
-                MySqlConnection conn = new MySqlConnection(connStr);
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                MySqlDataReader read;
-                conn.Open();
-                read = cmd.ExecuteReader();
-                conn.Close();
-                MenuUtama mu = new MenuUtama();
-                mu.Show();
-                this.Hide();
-                MessageBox.Show("Selamat datang, " + namaBox.Text, "Halo");
+                nama = namaBox.Text;
+                email = emailBox.Text;
+                save();
             }
         }
 
