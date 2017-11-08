@@ -52,9 +52,14 @@ namespace CiburuyDesk
         }
         private void masukbtn_Click(object sender, MouseButtonEventArgs e)
         {
-            if (namaBox.Text == "Nama")
+			if (String.IsNullOrWhiteSpace(namaBox.Text) == true)
             {
-                MessageBox.Show("Isi Nama");
+                MessageBox.Show("Nama tidak boleh kosong", "Oops...", MessageBoxButton.OK, MessageBoxImage.Warning);
+			}
+
+            else if (namaBox.Text == "Nama")
+            {
+                MessageBox.Show("Nama tidak boleh kosong", "Oops...", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             else if(emailBox.Text== "Email (opsional)")
             {
