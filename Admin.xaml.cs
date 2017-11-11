@@ -81,7 +81,9 @@ namespace CiburuyDesk
 
         private void tile3_Click(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("Masih dalam pengembangan", "Oops...", MessageBoxButton.OK, MessageBoxImage.Information);
+            LogData ld = new LogData();
+            ld.Show();
+            this.Hide();
         }
     }
 }
